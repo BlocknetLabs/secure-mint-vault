@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic NFT Whitelist Design System */
+
+@layer base {
+  :root {
+    /* Cyber Space Theme */
+    --background: 240 10% 3.9%;
+    --foreground: 200 100% 95%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 200 100% 95%;
+
+    /* Neon Electric Purple */
+    --primary: 280 100% 70%;
+    --primary-foreground: 240 10% 3.9%;
+
+    /* Cyber Cyan Accent */
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    /* Muted Glass */
+    --muted: 240 5% 15%;
+    --muted-foreground: 200 20% 65%;
+
+    /* Electric Green */
+    --accent: 120 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 20% 20%;
+    --input: 240 10% 12%;
+    --ring: 280 100% 70%;
+
+    /* Futuristic Elements */
+    --neon-glow: 280 100% 70%;
+    --cyber-cyan: 190 100% 50%;
+    --electric-green: 120 100% 50%;
+    --space-black: 240 10% 3.9%;
+    --glass-white: 200 100% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(320 100% 60%));
+    --gradient-cyber: linear-gradient(135deg, hsl(190 100% 50%), hsl(280 100% 70%));
+    --gradient-glass: linear-gradient(135deg, hsl(240 10% 8% / 0.8), hsl(240 10% 15% / 0.4));
+    
+    /* Effects */
+    --glow-primary: 0 0 20px hsl(280 100% 70% / 0.5);
+    --glow-cyber: 0 0 15px hsl(190 100% 50% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(240 10% 3.9% / 0.37);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+}
+
+@layer components {
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-gradient-to-br from-card/60 to-card/30 backdrop-blur-xl border border-border/50 rounded-xl;
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Neon glow button */
+  .neon-button {
+    @apply relative overflow-hidden rounded-lg px-6 py-3 font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+    box-shadow: var(--glow-primary);
+  }
+
+  .neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-primary), 0 10px 30px hsl(280 100% 70% / 0.3);
+  }
+
+  /* Cyber grid background */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(280 100% 70% / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(280 100% 70% / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Holographic border */
+  .holographic-border {
+    @apply relative overflow-hidden rounded-xl;
+  }
+
+  .holographic-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: var(--gradient-cyber);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+  }
+
+  /* Text glow effect */
+  .text-glow {
+    text-shadow: 0 0 10px hsl(280 100% 70% / 0.5);
+  }
+
+  .text-cyber-glow {
+    text-shadow: 0 0 10px hsl(190 100% 50% / 0.5);
+  }
+}
