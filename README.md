@@ -1,158 +1,278 @@
-# Secure Mint Vault
+# 🔐 Secure Mint Vault
 
-A secure, privacy-preserving whitelist and minting platform built with FHE (Fully Homomorphic Encryption) technology.
+> **Whitelist Privately, Mint Securely**
 
-## Features
+A cutting-edge, privacy-preserving NFT whitelist and minting platform powered by **FHE (Fully Homomorphic Encryption)** technology. Experience the future of secure Web3 interactions where your data remains private while ensuring fair access to premium NFT drops.
 
-- **Privacy-First Design**: All sensitive data is encrypted using FHE technology
-- **Secure Whitelist**: Encrypted whitelist entries with verification system
-- **Wallet Integration**: Seamless connection with popular Web3 wallets via RainbowKit
-- **Mint Management**: Secure token minting with encrypted request processing
-- **Reputation System**: User reputation tracking with encrypted scoring
-- **Modern UI**: Built with shadcn/ui and Tailwind CSS
+## ✨ Core Features
 
-## Technology Stack
+### 🛡️ **Privacy-First Architecture**
+- **End-to-End Encrypted** data transmission and storage
+- **FHE Technology** ensures computations on encrypted data
+- **Zero-Knowledge** verification system
+- **Private Data** protection throughout the entire process
 
-- **Frontend**: React, TypeScript, Vite
-- **UI Components**: shadcn/ui, Tailwind CSS
-- **Web3**: RainbowKit, Wagmi, Viem
-- **Blockchain**: Ethereum Sepolia Testnet
-- **Encryption**: FHE (Fully Homomorphic Encryption) via Zama
-- **Smart Contracts**: Solidity with FHE support
+### 🔗 **Seamless Web3 Integration**
+- **Multi-Wallet Support** via RainbowKit integration
+- **Network Flexibility** with Sepolia testnet support
+- **Real-time Status** tracking and updates
+- **Gas-Optimized** smart contract interactions
 
-## Getting Started
+### 🎯 **Advanced Whitelist Management**
+- **Encrypted Applications** with secure submission
+- **Verification System** with role-based access control
+- **Fair Access Distribution** algorithm
+- **Reputation Tracking** with encrypted scoring
 
-### Prerequisites
+### ⚡ **Modern User Experience**
+- **Cyberpunk-Inspired** UI with neon accents
+- **Responsive Design** for all devices
+- **Real-time Feedback** and status updates
+- **Accessibility-First** approach
 
-- Node.js 18+ and npm
-- Git
-- Web3 wallet (MetaMask, Rainbow, etc.)
+## 🚀 Technology Stack
 
-### Installation
+<table>
+<tr>
+<td align="center" width="33%">
 
-1. Clone the repository:
+### 🎨 **Frontend**
+- **React 18** + TypeScript
+- **Vite** build system
+- **Tailwind CSS** styling
+- **shadcn/ui** components
+
+</td>
+<td align="center" width="33%">
+
+### ⛓️ **Web3 & Blockchain**
+- **RainbowKit** wallet integration
+- **Wagmi** + **Viem** hooks
+- **Sepolia Testnet** deployment
+- **Ethereum** ecosystem
+
+</td>
+<td align="center" width="33%">
+
+### 🔐 **Security & Encryption**
+- **Zama FHE** technology
+- **Solidity** smart contracts
+- **End-to-End** encryption
+- **Privacy-Preserving** computations
+
+</td>
+</tr>
+</table>
+
+## 🚀 Quick Start
+
+### 📋 Prerequisites
+
+| Requirement | Version | Purpose |
+|-------------|---------|---------|
+| **Node.js** | 18+ | Runtime environment |
+| **npm** | Latest | Package manager |
+| **Git** | Latest | Version control |
+| **Web3 Wallet** | Any | MetaMask, Rainbow, etc. |
+
+### ⚡ Installation
+
 ```bash
+# 1️⃣ Clone the repository
 git clone https://github.com/BlocknetLabs/secure-mint-vault.git
 cd secure-mint-vault
-```
 
-2. Install dependencies:
-```bash
+# 2️⃣ Install dependencies
 npm install
-```
 
-3. Set up environment variables:
-```bash
+# 3️⃣ Configure environment
 cp env.example .env.local
-# Edit .env.local with your configuration
-```
+# Edit .env.local with your settings
 
-4. Start the development server:
-```bash
+# 4️⃣ Start development server
 npm run dev
+
+# 5️⃣ Open in browser
+# http://localhost:5173
 ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser.
+### 🎯 First Steps
 
-## Environment Variables
+1. **Connect Wallet** - Link your Web3 wallet to the platform
+2. **Submit Application** - Fill out the encrypted whitelist form
+3. **Wait for Verification** - Your application will be reviewed
+4. **Mint Tokens** - Once approved, request your NFT minting
+
+## ⚙️ Environment Configuration
 
 Create a `.env.local` file with the following variables:
 
 ```env
-# Chain Configuration
+# 🌐 Chain Configuration
 NEXT_PUBLIC_CHAIN_ID=11155111
 NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
 
-# Wallet Connect Configuration
+# 🔗 Wallet Connect Configuration
 NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=YOUR_PROJECT_ID
 
-# Contract Configuration
+# 📋 Contract Configuration (Update after deployment)
 NEXT_PUBLIC_CONTRACT_ADDRESS=YOUR_CONTRACT_ADDRESS
 NEXT_PUBLIC_VERIFIER_ADDRESS=YOUR_VERIFIER_ADDRESS
 NEXT_PUBLIC_TREASURY_ADDRESS=YOUR_TREASURY_ADDRESS
 ```
 
-## Smart Contract
+> **⚠️ Security Note**: Never commit sensitive keys to version control. Use environment variables for all configuration.
 
-The project includes a Solidity smart contract (`contracts/SecureMintVault.sol`) that implements:
+## 📜 Smart Contract Architecture
 
-- Encrypted whitelist management
-- Secure mint request processing
-- User reputation system
-- Treasury management
-- Emergency controls
+The project includes a comprehensive Solidity smart contract (`contracts/SecureMintVault.sol`) with advanced privacy features:
 
-### Contract Features
+### 🔐 **Core Functionality**
+- **Encrypted Whitelist Management** - Secure entry processing
+- **Mint Request Processing** - Privacy-preserving token minting
+- **User Reputation System** - Encrypted scoring mechanism
+- **Treasury Management** - Secure fund handling
+- **Emergency Controls** - Safety mechanisms
 
-- **FHE Integration**: All sensitive data is encrypted using Zama's FHE technology
-- **Access Control**: Role-based permissions for owner, verifier, and users
-- **Privacy Preservation**: User data remains encrypted on-chain
-- **Gas Optimization**: Efficient storage and computation patterns
+### 🛡️ **Security Features**
 
-## Usage
+| Feature | Description | Benefit |
+|---------|-------------|---------|
+| **FHE Integration** | Zama's FHE technology | Computations on encrypted data |
+| **Access Control** | Role-based permissions | Secure multi-user system |
+| **Privacy Preservation** | On-chain encryption | Data remains private |
+| **Gas Optimization** | Efficient patterns | Cost-effective operations |
 
-1. **Connect Wallet**: Use the wallet connector to link your Web3 wallet
-2. **Submit Whitelist Application**: Fill out the encrypted whitelist form
-3. **Wait for Verification**: Your application will be reviewed by verifiers
-4. **Create Mint Request**: Once verified, you can request token minting
-5. **Process Minting**: Approved requests are processed by the contract
+## 🎮 User Journey
 
-## Development
+### Step-by-Step Process
 
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-### Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── ui/             # shadcn/ui components
-│   ├── WalletConnector.tsx
-│   ├── WhitelistForm.tsx
-│   └── WhitelistStatus.tsx
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions and configurations
-├── pages/              # Page components
-└── App.tsx             # Main application component
+```mermaid
+graph LR
+    A[🔗 Connect Wallet] --> B[📝 Submit Application]
+    B --> C[⏳ Wait for Verification]
+    C --> D[✅ Get Approved]
+    D --> E[🎯 Create Mint Request]
+    E --> F[🚀 Process Minting]
 ```
 
-## Security
+### 📋 **Detailed Workflow**
 
-This project implements multiple security layers:
+1. **🔗 Connect Wallet** - Link your Web3 wallet using RainbowKit
+2. **📝 Submit Application** - Fill out the encrypted whitelist form
+3. **⏳ Wait for Verification** - Your application is reviewed by verifiers
+4. **✅ Get Approved** - Receive confirmation of whitelist status
+5. **🎯 Create Mint Request** - Request token minting once approved
+6. **🚀 Process Minting** - Approved requests are processed automatically
 
-- **FHE Encryption**: All sensitive data is encrypted using fully homomorphic encryption
-- **Access Controls**: Smart contract implements role-based access control
-- **Input Validation**: Comprehensive validation on both frontend and smart contract
-- **Secure Communication**: All blockchain interactions are properly secured
+## 🛠️ Development
 
-## Contributing
+### 📜 Available Scripts
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+| Command | Description | Usage |
+|---------|-------------|-------|
+| `npm run dev` | Start development server | Local development |
+| `npm run build` | Build for production | Deployment preparation |
+| `npm run preview` | Preview production build | Testing before deploy |
+| `npm run lint` | Run ESLint | Code quality check |
 
-## License
+### 📁 Project Structure
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
+secure-mint-vault/
+├── 📁 contracts/              # Smart contracts
+│   └── SecureMintVault.sol   # FHE-enabled contract
+├── 📁 src/
+│   ├── 📁 components/         # React components
+│   │   ├── 📁 ui/            # shadcn/ui components
+│   │   ├── WalletConnector.tsx
+│   │   ├── WhitelistForm.tsx
+│   │   └── WhitelistStatus.tsx
+│   ├── 📁 hooks/             # Custom React hooks
+│   ├── 📁 lib/               # Utilities & configurations
+│   ├── 📁 pages/             # Page components
+│   └── App.tsx               # Main application
+├── 📁 public/                # Static assets
+│   ├── favicon.ico           # Browser icon
+│   └── favicon.svg           # SVG icon
+└── 📄 Configuration files
+```
 
-## Support
+## 🔒 Security & Privacy
 
-For support and questions:
+This project implements multiple layers of security and privacy protection:
 
-- Create an issue in this repository
-- Contact the development team
-- Check the documentation for common solutions
+### 🛡️ **Security Layers**
 
-## Acknowledgments
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **FHE Encryption** | Zama FHE | Computations on encrypted data |
+| **Access Controls** | Role-based | Secure multi-user permissions |
+| **Input Validation** | Multi-layer | Frontend + smart contract validation |
+| **Secure Communication** | HTTPS/WSS | Encrypted blockchain interactions |
 
-- [Zama](https://zama.ai/) for FHE technology
-- [RainbowKit](https://rainbowkit.com/) for wallet integration
-- [shadcn/ui](https://ui.shadcn.com/) for UI components
-- [Vite](https://vitejs.dev/) for build tooling
+### 🔐 **Privacy Features**
+
+- **Zero-Knowledge Verification** - Prove without revealing
+- **Encrypted Storage** - All sensitive data encrypted on-chain
+- **Private Computations** - FHE enables private data processing
+- **Secure Transmission** - End-to-end encrypted communications
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how to get started:
+
+```bash
+# 1️⃣ Fork the repository
+# 2️⃣ Create a feature branch
+git checkout -b feature/amazing-feature
+
+# 3️⃣ Make your changes
+# 4️⃣ Commit with a clear message
+git commit -m 'Add amazing feature'
+
+# 5️⃣ Push to your fork
+git push origin feature/amazing-feature
+
+# 6️⃣ Open a Pull Request
+```
+
+### 📋 **Contribution Guidelines**
+
+- Follow the existing code style
+- Add tests for new features
+- Update documentation as needed
+- Ensure all checks pass
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support & Community
+
+### 📞 **Get Help**
+
+- **🐛 Bug Reports**: [GitHub Issues](https://github.com/BlocknetLabs/secure-mint-vault/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/BlocknetLabs/secure-mint-vault/discussions)
+- **📖 Documentation**: Check the docs in this repository
+
+### 🙏 **Acknowledgments**
+
+| Project | Purpose | Link |
+|---------|---------|------|
+| **Zama** | FHE technology | [zama.ai](https://zama.ai/) |
+| **RainbowKit** | Wallet integration | [rainbowkit.com](https://rainbowkit.com/) |
+| **shadcn/ui** | UI components | [ui.shadcn.com](https://ui.shadcn.com/) |
+| **Vite** | Build tooling | [vitejs.dev](https://vitejs.dev/) |
+
+---
+
+<div align="center">
+
+**🔐 Secure Mint Vault** - *Privacy-First NFT Platform*
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BlocknetLabs/secure-mint-vault)
+
+*Built with ❤️ by [BlocknetLabs](https://github.com/BlocknetLabs)*
+
+</div>
